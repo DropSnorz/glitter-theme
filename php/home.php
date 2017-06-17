@@ -29,13 +29,13 @@
 		</div>
 
 		<div class="foot-post card-footer">
-			<strong><?php $Language->p('Tags') ?></strong>
+			<div><?php echo $Post->date(); ?></div>
 			<?php
 				$links = array();
 				$tags = $Post->tags(true);
 
 				foreach($tags as $tagKey=>$tagName) {
-					$links[] = '<a href="'.HTML_PATH_ROOT.$Url->filters('tag').'/'.$tagKey.'">'.$tagName.'</a>';
+					$links[] = '<a class="post-tag" href="'.HTML_PATH_ROOT.$Url->filters('tag').'/'.$tagKey.'">#'.$tagName.'</a>';
 				}
 
 				echo implode(', ', $links);
