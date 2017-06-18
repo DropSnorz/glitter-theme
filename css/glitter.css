@@ -350,6 +350,10 @@ form .row:first-child .floating-label-form-group {
   font-size: 16px;
   padding: 25px 35px;
 }
+.btn-sm {
+  font-size: 11px;
+  padding: 5px 10px;
+}
 .btn-default:hover,
 .btn-default:focus {
   background-color: #0085A1;
@@ -463,7 +467,7 @@ h5 {
     top: 0;
     left: 0;
     max-width: 100%;
-    padding: .75em 1em;
+    padding: .75em 1em 2em 1em;
     color: rgba(0, 0, 0, .4);
     border-top: 1px solid rgba(0, 0, 0, .05) !important;
     background: #fff;
@@ -535,4 +539,26 @@ h5 {
 .tag-button{
   display: inline-block;
   margin-right: 20px;
+}
+
+.post-preview{
+
+  height:300px;
+  overflow: hidden;
+
+}
+
+.ellipse{
+
+  position: absolute;
+  width: 100%;
+  bottom: 47px;
+  height: 80px;
+  left: 0;
+  z-index: 2;
+
+
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,0)), to(#fff));
+  background: -moz-linear-gradient(top, rgba(255,255,255,0), #fff);
+  background: -o-linear-gradient(top, rgba(255,255,255,0), #fff);
 }
