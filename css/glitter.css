@@ -561,14 +561,14 @@ h5 {
 
 .tag-button{
   display: inline-block;
-  margin-right: 20px;
+  margin-right: 10px;
+  margin-left: 10px;
 }
 
 .post-preview{
 
-
+  height:300px;
   overflow: hidden;
-  height: 300px;
 
 }
 

@@ -20,7 +20,7 @@
                     <span class="sr-only">Toggle navigation</span>
                     Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="index.html" title="Dropsnorz | DrSico">
+                <a class="navbar-brand" href="/" title="Dropsnorz | DrSico">
                   <img class="img-circle" style="max-height:35px; margin-top:-7px; display:inline-block;"
              		src="<?php echo HTML_PATH_THEME.'img/avatar.jpg' ?>">
              		Dropsnorz | DrSico
@@ -93,11 +93,49 @@
 		</div>
 	</div>
 
-	<footer>
-		<div class="container">
-		<p class="text-centered foot-cp"><?php echo $Site->footer() ?> | <a href="https://twitter.com/dropsnorz">Theme by @dropsnorz</a></p>
-		</div>
-	</footer>
+	 <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <ul class="list-inline text-center">
+                    	<?php if($Site->twitter()) { ?>
+	                        <li>
+	                            <a href="<?php echo $Site->twitter(); ?>">
+	                                <span class="fa-stack fa-lg">
+	                                    <i class="fa fa-circle fa-stack-2x"></i>
+	                                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+	                                </span>
+	                            </a>
+	                        </li>
+	                    <?php } ?>
+	                    <?php if($Site->facebook()) { ?>
+	                        <li>
+	                            <a href="<?php echo $Site->facebook(); ?>">
+	                                <span class="fa-stack fa-lg">
+	                                    <i class="fa fa-circle fa-stack-2x"></i>
+	                                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+	                                </span>
+	                            </a>
+	                        </li>
+	                    <?php } ?>
+	                    <?php if($Site->github()) { ?>
+	                        <li>
+	                            <a href="<?php echo $Site->github(); ?>">
+	                                <span class="fa-stack fa-lg">
+	                                    <i class="fa fa-circle fa-stack-2x"></i>
+	                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+	                                </span>
+	                            </a>
+	                        </li>
+	                    <?php } ?>
+                    </ul>
+                    <p class="copyright text-muted"><?php echo $Site->footer() ?></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
 
 	<!-- Javascript -->
 	<?php
