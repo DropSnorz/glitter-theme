@@ -20,7 +20,7 @@
                     <span class="sr-only">Toggle navigation</span>
                     Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="/" title="Dropsnorz | DrSico">
+                <a class="navbar-brand" href="<?php echo $Site->homeLink(); ?>" title="Dropsnorz | DrSico">
                   <img class="img-circle" style="max-height:35px; margin-top:-7px; display:inline-block;"
              		src="<?php echo HTML_PATH_THEME.'img/avatar.jpg' ?>">
              		Dropsnorz | DrSico
@@ -52,7 +52,7 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="site-heading">
-                        <h1>com.dropsnorz.thoughts</h1>
+                        <h1><?php echo $Site->title(); ?></h1>
                         <hr class="small">
                         <!-- <span class="subheading"><?php echo ( Text::isNotEmpty($Site->slogan()) ) ? $Site->slogan() : 'Welcome to the machine'; ?></span> -->
                     	<div>

@@ -11,11 +11,11 @@
 	<!-- Cover Image -->
 	<?php
 		if($Page->coverImage()) {
-			echo '<a href="'.$Page->permalink().'" class="featured-image"><img src="'.$Page->coverImage().'" alt="Cover Image"></a>';
+			echo '<a href="'.$Page->permalink().'"><img class="img-responsive" src="'.$Page->coverImage().'" alt="Cover Image"></a>';
 		}
 	?>
 	
-	<div class="in-content">
+	<div class="col-md-12">
         <?php echo $Page->content() ?>
 
 	<!-- Plugins Page End -->

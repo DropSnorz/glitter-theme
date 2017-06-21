@@ -11,26 +11,23 @@
 	<!-- Cover Image -->
 	<?php
 		if($Post->coverImage()) {
-			echo '<a href="'.$Post->permalink().'" class="featured-image"><img src="'.$Post->coverImage().'" alt="Cover Image"></a>';
+			echo '<a href="'.$Post->permalink().'"><img class="img-responsive" src="'.$Post->coverImage().'" alt="Cover Image"></a>';
 		}
 	?>
-	<div class="in-content">
+	<div class="col-md-12">
         <?php echo $Post->content() ?>
 
-	<div class="foot-post">
-		<div class="units-row">
-		    <div class="unit-100">
-		    	<strong><?php $Language->p('Tags') ?></strong>
+	<div class="col-md-12">
+
+		    	<strong><?php $Language->p('Tags: ') ?></strong>
 		    	<?php
 		    	$links = array();
 		    	$tags = $Post->tags(true);
 		    	foreach($tags as $tagKey=>$tagName) {
-		    		$links[] = '<a href="'.HTML_PATH_ROOT.$Url->filters('tag').'/'.$tagKey.'">'.$tagName.'</a>';
+		    		$links[] = '<a href="'.HTML_PATH_ROOT.$Url->filters('tag').'/'.$tagKey.'">#'.$tagName.'</a>';
 		    	}
 		    	echo implode(', ', $links);
 		    	?>
-		    </div>
-		</div>
 	</div>
 
 	<!-- Plugins Post End -->

@@ -28,13 +28,22 @@
 
 						
 						if(array_key_exists('jeux', $tags)){
+							echo '<a href="'.HTML_PATH_ROOT.$Url->filters('tag').'/jeux">';
+
 							echo '<i class="fa fa-gamepad fa-2x" style="color:#2ecc71;"> </i>';
+							echo '</a>';
 						}
 						elseif (array_key_exists('code', $tags)){
+							echo '<a href="'.HTML_PATH_ROOT.$Url->filters('tag').'/code">';
+
 							echo '<i class="fa fa-code fa-2x" style="color:#c0392b;"> </i>';
+							echo '</a>';
+
 						}
 						elseif (array_key_exists('musique', $tags)){
+							echo '<a href="'.HTML_PATH_ROOT.$Url->filters('tag').'/musique">';
 							echo '<i class="fa fa-headphones fa-2x" style="color:#34495e;"> </i>';
+							echo '</a>';
 						}
 						else{
 							echo '<i class="fa fa-compass fa-2x" style="color:#34495e;"> </i>';
