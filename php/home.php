@@ -111,4 +111,16 @@
 <?php endforeach; ?>
 
 <!-- Paginator for posts -->
-<?php echo Paginator::html() ?>
+<div class="col-md-12">
+	<ul class="text-center list-inline">
+	<?php
+		if( Paginator::get('showNewer') ) {
+			echo '<li><a href="'.Paginator::urlPrevPage().'" class="btn btn-sm btn-default"><i class="fa fa-chevron-left"></i> '.$Language->get('Prev page').'</a></li>';
+		}
+
+		if( Paginator::get('showOlder') ) {
+			echo '<li><a href="'.Paginator::urlNextPage().'" class="btn btn-sm btn-default">'.$Language->get('Next page').' <i class="fa fa-chevron-right"></i></a></li>';
+		}
+	?>
+	</ul>
+</div>
