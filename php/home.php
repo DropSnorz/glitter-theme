@@ -7,7 +7,11 @@
 		<!-- Cover Image -->
 		<?php
 			if($Post->coverImage()) {
-				echo '<a href="'.$Post->permalink().'" class="card-img-top"><img src="'.$Post->coverImage().'" alt="Cover Image"></a>';
+
+				?>
+				<a href=" <?php echo $Post->permalink() ?>" class="card-img-top"><img src="<?php echo $Post->coverImage() ?>"></a>
+
+				<?php
 			}
 		?>
 
