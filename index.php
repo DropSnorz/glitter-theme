@@ -142,11 +142,14 @@
 		Theme::jquery();
 		Theme::javascript('bootstrap.min.js');
 		Theme::javascript('glitter.js');
+		Theme::javascript('highlight.pack.js');
 
 	?>
 
 	<!-- Plugins Site Body Begin -->
 	<?php Theme::plugins('siteBodyEnd') ?>
+
+	<script>hljs.initHighlightingOnLoad();</script>
 
 </body>
 </html>

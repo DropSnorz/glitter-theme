@@ -16,12 +16,12 @@ elseif( $Url->whereAmI()=='page' ) {
 /*
 <link rel="stylesheet" href="css/bootstrap.min.css" />
 <link rel="stylesheet" href="css/font-awesome.min.css" />
-<link rel="stylesheet" href="css/custom.css" />
 */
 Theme::css(array(
 	'bootstrap.min.css',
 	'font-awesome.min.css',
-	'glitter.css'
+	'glitter.css',
+	'highlight/default.css'
 ));
 
 /*
