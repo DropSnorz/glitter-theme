@@ -17,21 +17,24 @@
 	<div class="col-md-12">
         <?php echo $Post->content() ?>
 
-	<div class="col-md-12">
+		<div class="col-md-12">
 
-		    	<strong><?php $Language->p('Tags: ') ?></strong>
-		    	<?php
-		    	$links = array();
-		    	$tags = $Post->tags(true);
-		    	foreach($tags as $tagKey=>$tagName) {
-		    		$links[] = '<a href="'.HTML_PATH_ROOT.$Url->filters('tag').'/'.$tagKey.'">#'.$tagName.'</a>';
-		    	}
-		    	echo implode(', ', $links);
-		    	?>
+			    	<strong><?php $Language->p('Tags: ') ?></strong>
+			    	<?php
+			    	$links = array();
+			    	$tags = $Post->tags(true);
+			    	foreach($tags as $tagKey=>$tagName) {
+			    		$links[] = '<a href="'.HTML_PATH_ROOT.$Url->filters('tag').'/'.$tagKey.'">#'.$tagName.'</a>';
+			    	}
+			    	echo implode(', ', $links);
+			    	?>
+		</div>
+
+		<div class="col-md-12">
+			<!-- Plugins Post End -->
+			<?php Theme::plugins('postEnd') ?>
+
+		</div>
 	</div>
-
-	<!-- Plugins Post End -->
-	<?php Theme::plugins('postEnd') ?>
-
 </div>
 <!-- /post -->
